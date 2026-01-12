@@ -22,9 +22,11 @@ class View(ft.UserControl):
         # title
         self._title = ft.Text("Esame del 12/01/2026", color="blue", size=24)
         self._page.controls.append(self._title)
+        self._txt_result = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
 
         self._ddAnno1 = ft.Dropdown(label="Da", hint_text="Anno")
         self._ddAnno2 = ft.Dropdown(label="A", hint_text="Anno")
+        self._controller.fillDDYears()
         self._btnCreaGrafo = ft.ElevatedButton(text="Crea Grafo", on_click=self._controller.handleCreaGrafo)
 
         cont1 = ft.Container(self._ddAnno1, width=250)
@@ -46,8 +48,8 @@ class View(ft.UserControl):
         self._page.controls.append(row1)
         self._page.controls.append(row2)
         self._page.controls.append(row3)
-        self.txt_result = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
-        self._page.controls.append(self.txt_result)
+     #   self._txt_result = ft.ListView(expand=1, spacing=10, padding=20, auto_scroll=True)
+        self._page.controls.append(self._txt_result)
         self._page.update()
 
     def set_controller(self, controller):
