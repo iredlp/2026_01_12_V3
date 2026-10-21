@@ -38,7 +38,6 @@ class Model:
                 pilotiComuni = (set(a1. list_piloti) & set(a2.list_piloti ))
                 #ND: & FUNZIONA SOLO CON I SET! SE HAI LE LISTE CONSERVTILE IN SET E POI CONFRONTALE
 
-
                 if len(  pilotiComuni) > 0:
                     peso = len(pilotiComuni)
                    # if p1 > p2:
